@@ -131,22 +131,10 @@ Astra-Mission-Control/
 
 ## 📸 Screenshots
 
-> *(Add your gameplay screenshots here)*
+### 🌕 Mission Launch — Your Journey Starts Here
+*Enter the flight preparation zone and board the launch vehicle to begin your journey to the Moon.*
 
-### Lunar Outpost
-*Explore the fictional lunar base*
-
-<!-- <img width="1200" height="600" alt="Lunar Outpost" src="YOUR_IMAGE_URL_HERE" /> -->
-
-### Rover Exploration
-*Drive the rover and collect samples*
-
-<!-- <img width="1200" height="600" alt="Rover Exploration" src="YOUR_IMAGE_URL_HERE" /> -->
-
-### Mission Control Dashboard
-*Manage resources and complete mission activities*
-
-<!-- <img width="1200" height="600" alt="Mission Control" src="YOUR_IMAGE_URL_HERE" /> -->
+<img width="1039" height="420" alt="ASTRA Mission Control Launch Screen" src="https://github.com/user-attachments/assets/e3a37e10-590a-46af-9c7c-b86872888fcd" />
 
 ---
 
