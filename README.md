@@ -126,7 +126,7 @@ text
 ### 🌕 Mission Launch — Your Journey Starts Here
 *Enter the flight preparation zone and board the launch vehicle to begin your journey to the Moon.*
 
-![ASTRA Mission Control Launch Screen](journey-starts-here.png)
+<img width="1041" height="411" alt="ASTRA Mission Control Launch Screen" src="https://github.com/user-attachments/assets/cd8f66cb-bed5-45b8-9625-df4b65c2e612" />
 
 ---
 
