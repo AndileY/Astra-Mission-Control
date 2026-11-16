@@ -1,0 +1,469 @@
+.astra-root {
+    width: 100%;
+    height: 100%;
+    color: rgb(241, 248, 255);
+    overflow: hidden;
+    -unity-font-style: normal;
+}
+
+.scene-background,
+.world-shade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.scene-background {
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.world-shade {
+    background-color: rgba(1, 8, 19, 0.24);
+}
+
+.page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 38px 58px 42px 58px;
+    overflow: hidden;
+}
+
+.page-header {
+    flex-shrink: 0;
+    margin-bottom: 22px;
+}
+
+.brand-row,
+.button-row,
+.setting-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand-row {
+    justify-content: space-between;
+    min-height: 46px;
+    margin-bottom: 20px;
+}
+
+.brand,
+.kicker,
+.panel-kicker {
+    color: rgb(40, 225, 246);
+    -unity-font-style: bold;
+    letter-spacing: 1.1px;
+}
+
+.brand-tagline {
+    color: rgb(171, 205, 228);
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.page-title,
+.hero-title,
+.panel-title {
+    color: rgb(247, 251, 255);
+    -unity-font-style: bold;
+    text-shadow: 0px 3px 8px rgba(0, 0, 0, 0.72);
+}
+
+.page-title {
+    margin-top: 5px;
+}
+
+.page-content {
+    flex-grow: 1;
+    min-height: 0;
+    display: flex;
+}
+
+.glass-shell {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    flex-grow: 1;
+}
+
+.glass-glow {
+    position: absolute;
+    left: 3px;
+    top: 7px;
+    right: -3px;
+    bottom: -7px;
+    background-color: rgba(0, 194, 255, 0.12);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.glass-panel {
+    position: relative;
+    flex-grow: 1;
+    min-width: 0;
+    min-height: 0;
+    padding: 28px;
+    background-color: rgba(3, 15, 31, 0.84);
+    border-left-width: 2px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(30, 218, 249);
+    border-top-color: rgba(176, 232, 255, 0.48);
+    border-right-color: rgba(92, 174, 218, 0.34);
+    border-bottom-color: rgba(92, 174, 218, 0.34);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.welcome-columns {
+    flex-grow: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-copy {
+    width: 57%;
+    padding-right: 42px;
+}
+
+.hero-title {
+    margin-top: 18px;
+    margin-bottom: 6px;
+    letter-spacing: 10px;
+    text-shadow: 0px 2px 20px rgba(0, 193, 255, 0.78);
+    -unity-font-style: bold;
+}
+
+.hero-copy {
+    margin-top: 2px;
+    color: rgb(127, 238, 255);
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.hero-copy,
+.body-copy,
+.mission-subtitle,
+.speech-copy {
+    color: rgb(204, 222, 240);
+    white-space: normal;
+}
+
+.hero-caption {
+    margin-top: 22px;
+    color: rgb(255, 206, 93);
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.hero-subcaption {
+    margin-top: 7px;
+    color: rgb(184, 213, 234);
+    -unity-font-style: bold;
+    letter-spacing: 1.2px;
+}
+
+.welcome-card-shell {
+    width: 39%;
+    flex-grow: 0;
+}
+
+.welcome-card {
+    justify-content: center;
+    padding: 34px;
+    background-color: rgba(2, 15, 33, 0.76);
+    box-shadow: 0px 12px 38px rgba(0, 0, 0, 0.42);
+}
+
+.panel-title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.astra-button {
+    min-height: 54px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: rgb(247, 252, 255);
+    background-color: rgba(5, 31, 57, 0.98);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-color: rgba(107, 192, 229, 0.68);
+    border-right-color: rgba(107, 192, 229, 0.68);
+    border-bottom-color: rgba(107, 192, 229, 0.68);
+    border-left-color: rgba(107, 192, 229, 0.68);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    -unity-font-style: bold;
+    font-size: 18px;
+    white-space: normal;
+    transition-property: scale, background-color, border-top-color, border-right-color, border-bottom-color, border-left-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+    scale: 1 1;
+}
+
+.astra-button:hover {
+    scale: 1.025 1.025;
+    background-color: rgb(7, 89, 121);
+    border-top-color: rgb(92, 235, 255);
+    border-right-color: rgb(92, 235, 255);
+    border-bottom-color: rgb(92, 235, 255);
+    border-left-color: rgb(92, 235, 255);
+}
+
+.astra-button:active {
+    scale: 0.985 0.985;
+    background-color: rgb(4, 45, 73);
+    padding-top: 4px;
+}
+
+.astra-button:focus {
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-color: rgb(255, 211, 97);
+    border-right-color: rgb(255, 211, 97);
+    border-bottom-color: rgb(255, 211, 97);
+    border-left-color: rgb(255, 211, 97);
+}
+
+.button-primary {
+    background-color: rgb(0, 137, 166);
+    border-top-color: rgb(67, 231, 255);
+    border-right-color: rgb(67, 231, 255);
+    border-bottom-color: rgb(67, 231, 255);
+    border-left-color: rgb(67, 231, 255);
+}
+
+.button-primary:hover {
+    background-color: rgb(0, 181, 205);
+}
+
+.button-row {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+.button-row .astra-button {
+    margin-left: 8px;
+    min-width: 170px;
+}
+
+.settings-card-shell,
+.controls-card-shell,
+.complete-card-shell {
+    width: 100%;
+}
+
+.settings-card,
+.controls-card {
+    padding: 26px 34px;
+}
+
+.settings-rows {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 14px;
+}
+
+.setting-row {
+    min-height: 58px;
+    justify-content: space-between;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(102, 177, 220, 0.22);
+}
+
+.setting-label {
+    width: 42%;
+    color: rgb(205, 224, 241);
+    -unity-font-style: bold;
+    letter-spacing: 0.6px;
+}
+
+.setting-value {
+    width: 55%;
+    min-height: 46px;
+    font-size: 16px;
+}
+
+.status-copy,
+.hint-copy {
+    color: rgb(255, 208, 102);
+    -unity-font-style: bold;
+    white-space: normal;
+}
+
+.tutorial-page .page-content {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.tutorial-card-shell {
+    width: 39%;
+    flex-grow: 0;
+    margin-right: 20px;
+}
+
+.tutorial-visual-card-shell {
+    width: 59%;
+    flex-grow: 1;
+}
+
+.tutorial-card,
+.tutorial-visual-card {
+    padding: 30px;
+}
+
+.tutorial-icon {
+    flex-grow: 1;
+    min-height: 170px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: rgb(255, 207, 86);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    text-shadow: 0px 3px 12px rgba(0, 190, 255, 0.7);
+}
+
+.speech-copy {
+    min-height: 72px;
+    color: rgb(230, 244, 255);
+    -unity-font-style: bold;
+}
+
+.equipment-card {
+    display: none;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: rgba(12, 50, 73, 0.92);
+    border-left-width: 2px;
+    border-left-color: rgb(255, 202, 83);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.equipment-icon {
+    color: rgb(255, 207, 86);
+    -unity-font-style: bold;
+}
+
+.mission-page .page-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.mission-list-card-shell {
+    width: 32%;
+    flex-grow: 0;
+}
+
+.mission-detail-card-shell {
+    width: 66%;
+    flex-grow: 1;
+}
+
+.mission-list-card,
+.mission-detail-card {
+    padding: 22px;
+}
+
+.mission-option {
+    min-height: 58px;
+    justify-content: flex-start;
+    -unity-text-align: middle-left;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.mission-option-label {
+    color: rgb(226, 239, 250);
+    white-space: normal;
+    -unity-font-style: bold;
+}
+
+.mission-selected {
+    background-color: rgb(0, 104, 132);
+    border-top-color: rgb(55, 229, 255);
+    border-right-color: rgb(55, 229, 255);
+    border-bottom-color: rgb(55, 229, 255);
+    border-left-color: rgb(55, 229, 255);
+}
+
+.mission-locked {
+    opacity: 0.72;
+}
+
+.mission-subtitle {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.briefing-copy {
+    flex-grow: 1;
+    min-height: 90px;
+}
+
+.complete-card {
+    align-items: center;
+    justify-content: center;
+    -unity-text-align: middle-center;
+    background-color: rgba(2, 14, 29, 0.84);
+    box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.5);
+}
+
+.complete-mark {
+    color: rgb(89, 235, 195);
+    -unity-font-style: bold;
+    text-shadow: 0px 2px 12px rgba(89, 235, 195, 0.75);
+}
+
+.high-contrast .glass-panel {
+    background-color: rgba(0, 0, 0, 0.98);
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(0, 235, 255);
+}
+
+.high-contrast .body-copy,
+.high-contrast .hero-copy,
+.high-contrast .mission-subtitle,
+.high-contrast .setting-label {
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,8 @@
+ASTRONAUT MODEL CREDIT
+
+Asset: Astronaut.glb
+NASA 3D Resources: https://science.nasa.gov/3d-resources/astronaut/
+Model source: DigitalSpace Corporation
+NASA's 3D Resources collection states that its assets are free to download and use. Follow NASA's Images and Media Usage Guidelines. This model is provided for educational use in ASTRA: Mission Control.
+
+Unity integration package: Unity glTFast 6.4.0 (Apache License 2.0)

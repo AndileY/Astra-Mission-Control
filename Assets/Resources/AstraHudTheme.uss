@@ -1,0 +1,273 @@
+.hud-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    color: rgb(241, 248, 255);
+}
+
+.hud-topbar {
+    position: absolute;
+    left: 2.4%;
+    right: 2.4%;
+    top: 2.2%;
+    height: 74px;
+    padding-left: 22px;
+    padding-right: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(2, 10, 24, 0.84);
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(22, 210, 244);
+}
+
+.hud-brand,
+.hud-mission-code,
+.hud-status,
+.hud-clock {
+    -unity-font-style: bold;
+    white-space: nowrap;
+}
+
+.hud-brand { width: 32%; color: rgb(248, 252, 255); font-size: 24px; }
+.hud-mission-code { width: 30%; color: rgb(175, 207, 231); -unity-text-align: middle-center; }
+.hud-status { width: 28%; color: rgb(99, 244, 190); -unity-text-align: middle-right; }
+.hud-clock { width: 10%; color: rgb(40, 225, 246); -unity-text-align: middle-right; }
+
+.hud-resourcebar {
+    position: absolute;
+    left: 17%;
+    right: 17%;
+    top: 11.4%;
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    padding: 7px 10px;
+    background-color: rgba(4, 18, 36, 0.80);
+    border-left-width: 2px;
+    border-left-color: rgb(22, 210, 244);
+}
+
+.mission-radar {
+    position: absolute;
+    left: 430px;
+    bottom: 10%;
+    width: 164px;
+    height: 164px;
+    overflow: hidden;
+    border-radius: 82px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-color: rgba(48, 224, 255, 0.9);
+    border-right-color: rgba(48, 224, 255, 0.9);
+    border-top-color: rgba(48, 224, 255, 0.9);
+    border-bottom-color: rgba(48, 224, 255, 0.9);
+    background-color: rgba(2, 21, 39, 0.88);
+}
+.radar-axis-vertical { position: absolute; left: 50%; top: 14%; bottom: 14%; width: 1px; background-color: rgba(103, 190, 215, 0.35); }
+.radar-axis-horizontal { position: absolute; top: 50%; left: 14%; right: 14%; height: 1px; background-color: rgba(103, 190, 215, 0.35); }
+.radar-north, .radar-east, .radar-south, .radar-west { position: absolute; width: 18px; height: 16px; color: rgb(205, 236, 248); -unity-font-style: bold; -unity-text-align: middle-center; }
+.radar-north { top: 2px; left: 50%; margin-left: -9px; color: rgb(43, 231, 255); }
+.radar-east { right: 3px; top: 50%; margin-top: -8px; }
+.radar-south { bottom: 2px; left: 50%; margin-left: -9px; }
+.radar-west { left: 3px; top: 50%; margin-top: -8px; }
+.radar-player { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin-left: -5px; margin-top: -5px; border-radius: 5px; background-color: rgb(255, 255, 255); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(28, 220, 255); border-right-color: rgb(28, 220, 255); border-top-color: rgb(28, 220, 255); border-bottom-color: rgb(28, 220, 255); }
+.radar-facility-marker { position: absolute; width: 32px; height: 17px; margin-left: -16px; margin-top: -8px; align-items: center; justify-content: center; background-color: rgba(7, 48, 70, 0.94); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 195, 73); border-right-color: rgb(255, 195, 73); border-top-color: rgb(255, 195, 73); border-bottom-color: rgb(255, 195, 73); }
+.radar-facility-code { color: rgb(255, 231, 178); font-size: 8px; -unity-font-style: bold; -unity-text-align: middle-center; }
+.radar-target { background-color: rgba(20, 150, 177, 0.98); border-left-color: rgb(73, 244, 255); border-right-color: rgb(73, 244, 255); border-top-color: rgb(73, 244, 255); border-bottom-color: rgb(73, 244, 255); }
+.radar-target .radar-facility-code { color: rgb(255, 255, 255); }
+.radar-legend { position: absolute; bottom: 17px; left: 0; right: 0; color: rgb(157, 195, 219); -unity-text-align: middle-center; -unity-font-style: bold; }
+.hud-waypoint-guide { position: absolute; left: 50%; top: 20.5%; width: 360px; margin-left: -180px; min-height: 62px; padding: 9px 14px; background-color: rgba(2, 16, 32, 0.94); border-left-width: 3px; border-left-color: rgb(32, 220, 248); }
+.hud-waypoint-title { color: rgb(42, 225, 247); -unity-font-style: bold; }
+.hud-waypoint-copy { color: rgb(244, 249, 255); -unity-font-style: bold; white-space: normal; }
+
+.hud-resource-tile {
+    flex-grow: 1;
+    min-width: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: rgba(17, 42, 65, 0.72);
+}
+
+.hud-resource-heading,
+.hud-title-row,
+.hud-progress-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hud-resource-name,
+.hud-resource-value,
+.hud-progress-value,
+.hud-active-objective {
+    -unity-font-style: bold;
+}
+
+.hud-resource-name { color: rgb(180, 210, 232); }
+.hud-resource-value { color: rgb(248, 252, 255); }
+.hud-resource-track,
+.hud-progress-track {
+    height: 7px;
+    margin-top: 8px;
+    background-color: rgba(126, 157, 184, 0.38);
+}
+
+.hud-resource-fill,
+.hud-progress-fill {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(30, 216, 238);
+    transition-property: width, background-color;
+    transition-duration: 180ms;
+}
+
+.resource-low { background-color: rgb(255, 177, 65); }
+.resource-critical { background-color: rgb(255, 83, 89); }
+
+.hud-objectives-shell {
+    position: absolute;
+    left: 2.4%;
+    top: 20.5%;
+    bottom: 11.7%;
+    width: 405px;
+    flex-grow: 0;
+}
+
+.hud-objectives {
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    background-color: rgba(3, 15, 30, 0.84);
+}
+
+.hud-title-row { margin-bottom: 12px; }
+.hud-title-row .astra-button { min-height: 42px; min-width: 155px; margin: 0; font-size: 14px; }
+.hud-mission-title { margin-top: 3px; margin-bottom: 6px; font-size: 29px; -unity-font-style: bold; }
+.hud-objectives-list { flex-grow: 1; margin-top: 18px; margin-bottom: 12px; color: rgb(236, 245, 252); white-space: pre-wrap; -unity-font-style: bold; }
+.hud-active-objective { min-height: 42px; margin-bottom: 10px; color: rgb(42, 224, 247); }
+.hud-progress-row { margin-top: auto; }
+.hud-progress-value { color: rgb(230, 241, 250); }
+.hud-objectives .astra-button { min-height: 42px; margin-bottom: 0; font-size: 14px; }
+
+.hud-bottombar {
+    position: absolute;
+    left: 2.4%;
+    right: 2.4%;
+    bottom: 2.2%;
+    height: 58px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(3, 13, 27, 0.84);
+}
+
+.hud-controls { flex-grow: 1; color: rgb(185, 212, 234); -unity-font-style: bold; }
+.hud-comms { width: 175px; color: rgb(40, 225, 246); -unity-text-align: middle-right; -unity-font-style: bold; }
+.hud-pause { min-width: 118px; min-height: 40px; margin: 0 0 0 14px; font-size: 14px; }
+
+.hud-facility-shell {
+    position: absolute;
+    right: 2.4%;
+    bottom: 11.5%;
+    width: 350px;
+    min-height: 120px;
+    flex-grow: 0;
+}
+
+.hud-facility { padding: 18px; background-color: rgba(3, 18, 34, 0.91); }
+.hud-resource-alert {
+    position: absolute;
+    left: 29%;
+    right: 29%;
+    top: 19.5%;
+    min-height: 48px;
+    padding: 10px 18px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(110, 66, 10, 0.96);
+    border-left-width: 3px;
+    border-left-color: rgb(255, 202, 78);
+}
+
+.hud-resource-alert.warning-critical { background-color: rgba(120, 24, 27, 0.98); border-left-color: rgb(255, 91, 91); }
+.hud-warning-copy { color: rgb(255, 237, 204); -unity-font-style: bold; -unity-text-align: middle-center; }
+
+.hud-message {
+    position: absolute;
+    left: 27%;
+    right: 27%;
+    bottom: 10.5%;
+    min-height: 52px;
+    padding: 10px 16px;
+    justify-content: center;
+    background-color: rgba(3, 16, 31, 0.96);
+    border-left-width: 2px;
+    border-left-color: rgb(22, 210, 244);
+}
+
+.hud-message-copy { -unity-font-style: bold; -unity-text-align: middle-center; }
+.hud-objective-list-card-shell { position: absolute; left: 30%; top: 25%; width: 40%; max-height: 54%; flex-grow: 0; }
+.hud-objective-list-card { padding: 24px; background-color: rgba(2, 14, 30, 0.97); }
+
+.hud-touch-controls {
+    position: absolute;
+    right: 2.4%;
+    bottom: 19%;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hud-overlay-shade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-color: rgba(0, 5, 15, 0.70);
+}
+
+.hud-overlay-card-shell { width: 74%; max-width: 1120px; max-height: 91%; flex-grow: 0; }
+.hud-overlay-card {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 46px;
+    overflow-y: auto;
+    background-color: rgba(3, 17, 35, 0.97);
+}
+
+.hud-overlay-title { margin-top: 14px; margin-bottom: 14px; color: rgb(247, 251, 255); font-size: 36px; -unity-font-style: bold; text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.76); }
+.hud-overlay-card .body-copy { margin-top: 8px; margin-bottom: 16px; font-size: 20px; }
+.hud-overlay-footnote { margin-top: 14px; color: rgb(169, 199, 221); -unity-font-style: bold; white-space: normal; }
+.hud-guide-keys { margin-top: 10px; margin-bottom: 18px; color: rgb(40, 225, 246); -unity-font-style: bold; }
+.hud-action-stack { display: flex; flex-direction: column; margin-top: 10px; }
+.hud-action-stack .astra-button { min-height: 58px; }
+.hud-score { margin-top: 6px; margin-bottom: 12px; color: rgb(255, 205, 84); -unity-font-style: bold; }
+.hud-learning { margin-top: 12px; margin-bottom: 18px; color: rgb(232, 243, 252); white-space: normal; -unity-font-style: bold; }
+.hud-science-copy { margin-top: 15px; margin-bottom: 16px; color: rgb(47, 222, 244); white-space: normal; }
+.hud-storm-copy { min-height: 230px; white-space: normal; }
+.hud-overlay-card .button-row { flex-wrap: wrap; margin-top: 12px; }
+.hud-overlay-card .button-row .astra-button { flex-grow: 1; min-width: 190px; }
+
+.high-contrast .hud-topbar,
+.high-contrast .hud-resourcebar,
+.high-contrast .hud-objectives,
+.high-contrast .hud-bottombar,
+.high-contrast .hud-facility,
+.high-contrast .hud-overlay-card { background-color: rgba(0, 0, 0, 0.99); }
+

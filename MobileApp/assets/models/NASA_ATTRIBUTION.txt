@@ -1,0 +1,37 @@
+NASA 3D HARDWARE MODELS
+
+ASTRA uses the following GLB models from NASA's 3D Resources. NASA's catalog states that its models are free to download and use. Follow NASA's Images and Media Usage Guidelines; ASTRA is an independent educational game and is not endorsed by NASA.
+
+- Habitat Demonstration Unit, Parts 1 and 2 — NASA/LaRC/Advanced Concepts Lab
+  https://science.nasa.gov/3d-resources/habitat-demonstration-unit/
+- 70 meter dish — NASA/Ames Research Center
+  https://science.nasa.gov/3d-resources/70-meter-dish/
+- Tracking and Data Relay Satellite (TRDS) (E) — NASA/Christopher R. Meaney
+  https://science.nasa.gov/3d-resources/tracking-and-data-relay-satellites-trds-e/
+- Lunar Reconnaissance Orbiter (A) — NASA/Christopher R. Meaney
+  https://science.nasa.gov/3d-resources/lunar-reconnaissance-orbiter-a/
+- Space Exploration Vehicle — NASA/LaRC/Advanced Concepts Lab
+  https://science.nasa.gov/3d-resources/space-exploration-vehicle/
+- Apollo Lunar Module — NASA/Michael D. Carbajal
+  https://science.nasa.gov/3d-resources/apollo-lunar-module/
+- International Space Station (ISS) (B) — NASA/Michael D. Carbajal
+  https://science.nasa.gov/3d-resources/international-space-station-iss-b/
+
+The models are scaled to fit ASTRA's playable set. They are genuine NASA model meshes; some interactive uses (for example, the ISS as a learning reference for oxygen/water/greenhouse systems) are simplified gameplay representations and are labelled in the mission briefing.
+
+NASA media usage guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/
+
+Additional runtime meshes stored in StreamingAssets:
+- Space Launch System (SLS) printable model — NASA / Marshall Space Flight Center
+  https://science.nasa.gov/3d-resources/space-launch-system-sls/
+- Apollo 11 landing-site topography (Sea of Tranquility, LRO height data; source model is vertically exaggerated 60x)
+  https://science.nasa.gov/3d-resources/apollo-11-landing-site/
+
+Additional NASA models added for ASTRA missions:
+- Z2 Spacesuit — NASA Langley Research Center / Advanced Concepts Lab (future surface-suit concept). https://science.nasa.gov/3d-resources/z2-spacesuit/
+- Mars 2020 Perseverance Rover — NASA/JPL-Caltech. https://science.nasa.gov/3d-resources/mars-2020-perseverance-rover/
+- Extravehicular Mobility Unit — NASA / Michael D. Carbajal. https://science.nasa.gov/3d-resources/extravehicular-mobility-unit/
+All models remain NASA-sourced and NASA usage guidelines apply. Z2 and Perseverance GLBs were downloaded from NASA's 3D Resources pages. NASA models are scaled for gameplay; mission duties and interactions remain game-authored simulations.
+
+Acquisition/processing policy record:
+Source category for all models used: NASA. No Local, Sketchfab, or Generated substitute was needed because mission hardware, habitats, rovers, and suits had NASA 3D assets. See Processed/processing-report.json for Blender cleanup/export details and per-model exceptions. The Editor startup importer imports the Resources GLBs with glTFast/Draco; runtime fallback reads original mission hardware GLBs from StreamingAssets.

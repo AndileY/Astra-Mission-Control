@@ -1,0 +1,19 @@
+# NASA source notes
+
+ASTRA's setting and educational descriptions draw on official NASA and Canadian Space Agency material selected for the **Build a Junior Astronaut Mission Trainer** challenge. The environment uses original Unity geometry, not NASA photographs, models, or terrain datasets. It is a stylized fictional outpost rather than a mapped Shackleton site.
+
+## Sources used
+
+- [NASA — The Lunar South Pole Region](https://www.nasa.gov/reference/moonbase-environment/): the south-polar region has rugged terrain, long shadows, uneven illumination, and areas that remain permanently shadowed. These ideas inform the scene's cratered setting and the simplified solar-output decision.
+- [NASA — Shackleton Crater's Illuminated Rim & Shadowed Interior](https://science.nasa.gov/resource/shackleton-craters-illuminated-rim-shadowed-interior/): some rim locations receive prolonged sunlight while the crater interior remains permanently shadowed; NASA describes the region as a possible future location for solar-supported operations and exploration.
+- [NASA — Moon Base Systems](https://www.nasa.gov/moonbase-systems/): future lunar habitation, power, communications, and transportation systems must work together to support exploration. This informs which facility types appear in the prototype; it does not validate the game's specific layout or resource rules.
+- [NASA NSSDC — Moon Fact Sheet](https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html): lists lunar surface gravity as approximately 1.62 m/s². ASTRA uses that value for a simplified game movement model.
+- [NASA CCMC — DONKI](https://ccmc.gsfc.nasa.gov/tools/DONKI/) and its [SEP API](https://ccmc.gsfc.nasa.gov/DONKI-API/get/SEP): ASTRA requests the latest 30-day Solar Energetic Particle (SEP) event records when a mission begins. The in-game science panel displays the returned count/date range, or clearly reports when the request is unavailable. This is challenge-relevant real data context only: ASTRA does not convert SEP records into lunar radiation dose or health-risk estimates. The in-game alert remains a labeled practice scenario.
+- [Canadian Space Agency — Food production on the Moon and in remote areas](https://www.asc-csa.gc.ca/eng/youth-educators/toolkits/food-production/): the in-game greenhouse activity links this youth/educator toolkit and teaches that space food production connects to crew nutrition and growing food in difficult environments. ASTRA's crop duration, water/power costs, and yield are fictional game values, not CSA findings.
+- [NASA OSDR RadLab](https://visualization.osdr.nasa.gov/radlab/gui/overview): challenge resource for viewing radiation telemetry from spacecraft instruments and agencies. ASTRA does not treat those readings as lunar surface dose; the interface points learners to the source and states that environmental limitation.
+
+## Science and simulation limits
+
+The 0–100 oxygen, water, food, and power meters, consumption rates, habitat-condition meter, 0–100 simulated exposure index, event trigger, crop growth time/yield, shelter preparation/decision costs, and decision effects are fictional balancing values. They are not NASA/CSA measurements, engineering requirements, radiation dose, or operational advice. DONKI's live SEP event records are displayed as context only, never translated into the fictional index. “Shackleton Outpost” is a fictional educational setting; it should not be presented as an existing NASA base. The rover “sample” is virtual.
+
+The app requires a network connection for a live DONKI query. If that request fails, the mission still runs and labels the event as a fictional drill. No cached SEP observations are shown as if live. The resource panel links directly to DONKI and the CSA food toolkit so learners can explore the challenge resources.

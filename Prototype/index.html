@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09111c">
+  <title>ASTRA: Mission Control — First Light</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="moon" aria-label="Isometric lunar outpost simulation"></canvas>
+    <div class="world-vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-symbol">A</span><span>ASTRA<small>MISSION CONTROL</small></span></div>
+      <div class="mission-id"><i class="signal-dot"></i><span>SHACKLETON OUTPOST <b>· SIM</b></span></div>
+      <div class="clock-block"><small>MISSION ELAPSED</small><strong id="clock">00:00</strong></div>
+      <button class="top-button" id="pauseButton" aria-label="Pause mission" title="Pause mission">Ⅱ</button>
+    </header>
+
+    <section class="resource-strip" aria-label="Outpost resources">
+      <div class="resource-card"><span class="resource-glyph o2">O₂</span><div class="resource-copy"><div class="resource-label"><span>OXYGEN</span><b id="oxygenValue">100%</b></div><div class="meter"><i id="oxygenMeter"></i></div></div></div>
+      <div class="resource-card"><span class="resource-glyph h2o">H₂O</span><div class="resource-copy"><div class="resource-label"><span>WATER</span><b id="waterValue">100%</b></div><div class="meter"><i id="waterMeter"></i></div></div></div>
+      <div class="resource-card"><span class="resource-glyph food">▤</span><div class="resource-copy"><div class="resource-label"><span>FOOD</span><b id="foodValue">100%</b></div><div class="meter"><i id="foodMeter"></i></div></div></div>
+      <div class="resource-card"><span class="resource-glyph power">ϟ</span><div class="resource-copy"><div class="resource-label"><span>POWER</span><b id="powerValue">82%</b></div><div class="meter"><i id="powerMeter"></i></div></div></div>
+      <div class="base-condition"><span class="condition-orbit">◉</span><div><small>HABITAT</small><b id="habitatValue">100%</b></div><span class="state-pill" id="baseStatus">STANDBY</span></div>
+    </section>
+
+    <aside class="mission-panel glass">
+      <div class="panel-kicker"><span>MISSION 01</span><b>ARRIVAL</b></div>
+      <h1>First light</h1>
+      <p class="mission-description">Bring the outpost online, protect critical systems, and explore beyond the landing zone.</p>
+      <ol class="objectives" id="objectives"></ol>
+      <div class="progress-row"><span>MISSION PROGRESS</span><b id="progressLabel">0 / 5</b></div>
+      <div class="progress-meter"><i id="progressMeter"></i></div>
+      <button class="briefing-link" id="briefingButton">MISSION BRIEFING <span>↗</span></button>
+    </aside>
+
+    <div class="site-label"><span class="site-cross">⌖</span><div><b id="siteName">LANDING ZONE</b><small>SHACKLETON REGION · LUNAR SOUTH POLE</small></div></div>
+    <div class="center-reticle"><i></i><b></b></div>
+    <div class="interact-hint" id="interactHint"><span class="key">E</span><span id="interactName">INTERACT</span><small id="interactRange">IN RANGE</small></div>
+    <div class="toast" id="toast" role="status"></div>
+
+    <section class="facility-panel glass" id="facilityPanel">
+      <button class="panel-close" id="closeFacility" aria-label="Close facility panel">×</button>
+      <small>FACILITY IN RANGE</small>
+      <h2 id="facilityTitle">Facility</h2>
+      <p id="facilityDescription"></p>
+      <button class="action-button" id="facilityAction">INTERACT <span>↗</span></button>
+    </section>
+
+    <section class="event-panel glass" id="eventPanel" aria-live="assertive">
+      <div class="alert-heading"><span class="alert-icon">!</span><b>MISSION ALERT <i>· PRIORITY 2</i></b></div>
+      <h2>Solar output fluctuation</h2>
+      <p>Array output has dropped in this simulation. Battery reserves are falling. Choose how to stabilize the outpost.</p>
+      <button class="choice-button recommended" id="shedLoad"><b>SHED GREENHOUSE LOAD</b><small>Prioritize life support · Power +14 · Food −4</small><span>01</span></button>
+      <button class="choice-button" id="restartSystems"><b>RESTART ALL SYSTEMS</b><small>Keep full output · Power −18 · Habitat −12</small><span>02</span></button>
+      <small class="simulation-note">SIMULATION VALUES ONLY · NOT OPERATIONAL GUIDANCE</small>
+    </section>
+
+    <footer class="bottom-bar">
+      <div class="control-hint"><span>W A S D</span> MOVE <span>SHIFT</span> SPRINT <span>SPACE</span> HOP <span>E</span> INTERACT <span>R-DRAG</span> LOOK</div>
+      <div class="comms-state"><i class="radio-bars">▂▅▇</i> COMMS <b id="commsStatus">STANDBY</b></div>
+    </footer>
+
+    <div class="overlay" id="overlay">
+      <section class="modal intro-modal" id="introModal">
+        <div class="modal-kicker"><i class="signal-dot"></i> JUNIOR ASTRONAUT MISSION TRAINER</div>
+        <div class="wordmark">ASTRA <span>/</span> <small>01</small></div>
+        <h2>First light<br><em>on the Moon.</em></h2>
+        <p>Your crew has arrived at Shackleton Outpost. Activate communications and solar power, inspect life support, respond to a simulated power fault, then collect a virtual lunar sample.</p>
+        <div class="mission-facts"><div><small>LOCATION</small><b>Shackleton region</b></div><div><small>CREW</small><b>4 astronauts</b></div><div><small>MISSION</small><b>Surface operations</b></div></div>
+        <div class="start-choices">
+          <button class="launch-button" id="trainingButton">SHOW ME HOW TO PLAY <span>→</span></button>
+          <button class="skip-guide-button" id="skipGuideButton">I KNOW HOW TO PLAY — SKIP GUIDE</button>
+        </div>
+        <p class="returning-note" id="returningNote" aria-live="polite"></p>
+        <button class="text-button" id="readBriefingButton">READ THE SOUTH POLE BRIEFING</button>
+        <div class="modal-footer"><span>ASTRA // FLIGHT DECK 01</span><span>EDUCATIONAL SIMULATION</span></div>
+      </section>
+      <section class="modal secondary-modal hidden" id="briefingModal">
+        <button class="panel-close" id="closeBriefing" aria-label="Close briefing">×</button>
+        <div class="modal-kicker">NASA SCIENCE NOTES</div>
+        <h2>Light and shadow<br>shape the mission.</h2>
+        <p>Near the lunar South Pole, some ridges can receive long periods of sunlight while some crater interiors remain permanently shadowed. Choosing where to place power systems and how to explore the terrain are real planning challenges.</p>
+        <p>The Moon's surface gravity is about 1.62 m/s². This demo uses simplified movement and fictional resource values. It is not astronaut operating guidance.</p>
+        <a href="../Docs/SCIENCE-SOURCES.md" target="_blank" rel="noreferrer">OPEN NASA SOURCE NOTES ↗</a>
+        <button class="text-button" id="replayGuideButton">REPLAY HOW-TO GUIDE</button>
+        <button class="launch-button" id="briefingStart">CONTINUE TO MISSION <span>→</span></button>
+      </section>
+      <section class="modal secondary-modal tutorial-modal hidden" id="tutorialModal" aria-live="polite">
+        <div class="modal-kicker"><i class="signal-dot"></i> QUICK GUIDE <span id="tutorialCounter">STEP 1 OF 3</span></div>
+        <h2 id="tutorialTitle">Move around the outpost.</h2>
+        <p id="tutorialCopy">Use the keys to explore the landing site. Take your time; there is no rush.</p>
+        <div class="tutorial-keys" id="tutorialKeys">W A S D <span>MOVE</span> · SHIFT <span>SPRINT</span> · SPACE <span>HOP</span></div>
+        <div class="tutorial-actions">
+          <button class="text-button" id="tutorialPrevious">← BACK</button>
+          <button class="skip-guide-button" id="tutorialSkip">SKIP GUIDE</button>
+          <button class="launch-button" id="tutorialNext">NEXT <span>→</span></button>
+        </div>
+      </section>
+      <section class="modal secondary-modal hidden" id="pauseModal">
+        <div class="modal-kicker">MISSION CONTROL</div><h2>Mission paused</h2><p>Your crew and outpost are holding position.</p>
+        <button class="launch-button" id="resumeButton">RESUME MISSION</button>
+        <button class="text-button" id="restartButton">RESTART MISSION</button>
+      </section>
+      <section class="modal report-modal hidden" id="reportModal">
+        <div class="modal-kicker">ASTRA // FLIGHT DEBRIEF</div>
+        <div class="report-star">✦</div>
+        <h2 id="reportTitle">Mission complete</h2>
+        <p id="reportDescription"></p>
+        <div class="score-stats"><div><small>MISSION SCORE</small><b id="scoreValue">000</b></div><div><small>HABITAT</small><b id="reportHabitat">100%</b></div><div><small>CREW STATUS</small><b id="crewStatus">SAFE</b></div></div>
+        <div class="learning-note"><b>WHAT YOU LEARNED</b><p id="learningText"></p></div>
+        <button class="launch-button" id="againButton">FLY AGAIN <span>↻</span></button>
+      </section>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
