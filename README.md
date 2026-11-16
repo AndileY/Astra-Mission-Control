@@ -1,8 +1,3 @@
-## 📋 Complete README Content
-
-Click the copy button in the top-right corner of the code block below to copy everything:
-
-```text
 # 🚀 ASTRA: Mission Control
 
 > A playable Unity 6.6 URP prototype — junior astronaut mission trainer.
@@ -43,9 +38,7 @@ Open `Prototype/index.html` in a browser. The isometric demo runs **offline** �
 
 The campaign order is:
 
-```
-🌕 Moon First Light  →  🌱 Moon Greenhouse  →  🔴 Mars Storm Watch  →  🌑 Europa Shadow Scout
-```
+🌕 Moon First Light → 🌱 Moon Greenhouse → 🔴 Mars Storm Watch → 🌑 Europa Shadow Scout
 
 Complete missions to unlock later destinations. Missions include:
 
@@ -80,81 +73,3 @@ Complete missions to unlock later destinations. Missions include:
 ---
 
 ## 📁 Project Layout
-
-```
-Astra-Mission-Control/
-│
-├── Assets/
-│   ├── _Project/
-│   │   ├── Scripts/                # Mission systems, player controls, UI, world interactions
-│   │   └── Scenes/
-│   │       └── ASTRA_Bootstrap.unity   # First playable Unity scene
-│   ├── Editor/
-│   │   └── AstraSceneBuilder.cs    # Scene generation and build commands
-│   └── StreamingAssets/
-│       └── NASA/                   # NASA model files used by the runtime loader
-│
-├── Docs/
-│   └── SCIENCE-SOURCES.md          # Science references and simulation limits
-│
-├── MobileApp/                      # Mobile companion app
-├── Packages/                       # Unity package manifest
-├── ProjectSettings/                # Unity project settings
-├── Prototype/                      # Offline browser demo
-│
-├── .gitignore
-├── .vsconfig
-└── README.md                       # This file
-```
-
----
-
-## 📜 Attribution & License
-
-- 🛰️ **NASA model and science attributions** are included with the project assets and in the science notes.
-- ⚖️ ASTRA is an **independent educational prototype** — it is **not endorsed by NASA**.
-- 📄 **No software license** is currently specified in this repository, so public availability alone does not grant reuse rights.
-
----
-
-## 🛠️ Tech Stack
-
-| Component | Technology |
-|-----------|------------|
-| 🎮 Engine | Unity 6.6 URP |
-| 💻 Language | C# |
-| 🌐 Browser Demo | HTML5 / JavaScript |
-| 📡 Data Source | NASA DONKI (solar events) |
-| 🧊 3D Models | NASA GLB assets |
-
----
-
-## 📸 Screenshots
-
-### 🌕 Mission Launch — Your Journey Starts Here
-*Enter the flight preparation zone and board the launch vehicle to begin your journey to the Moon.*
-
-<img width="1039" height="420" alt="ASTRA Mission Control Launch Screen" src="https://github.com/user-attachments/assets/e3a37e10-590a-46af-9c7c-b86872888fcd" />
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## 📬 About
-
-**Stars:** 0  
-**Watchers:** 0  
-**Forks:** 0
-
----
-
-**Made with ❤️ for learning and exploration**
-```
