@@ -150,11 +150,9 @@ Astra-Mission-Control/
 
 ## 📬 About
 
-**ASTRA: Mission Control** — a junior astronaut mission trainer built with Unity 6.6 URP.
-
-- ⭐ **Stars:** 0
-- 👀 **Watchers:** 0
-- 🍴 **Forks:** 0
+**Stars:** 0  
+**Watchers:** 0  
+**Forks:** 0
 
 ---
 
